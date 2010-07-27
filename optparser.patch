@@ -1,0 +1,11 @@
+--- ./check_tftp.py~	2010-07-27 23:11:00.000000000 +0300
++++ ./check_tftp.py	2010-07-27 23:11:08.415541629 +0300
+@@ -92,7 +92,7 @@
+     parser.add_option(  "-t",
+                         "--timeout",
+                         dest="timeout",
+-                        default=15,
++                        default="15",
+                         help="Filename to fetch.")
+ 
+     parser.add_option(  "-v",
