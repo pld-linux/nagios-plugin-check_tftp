@@ -17,6 +17,7 @@ URL:		http://oss.isg.inf.ethz.ch/nagiosplug/
 %{?with_tests:BuildRequires:	python}
 BuildRequires:	rpm-pythonprov
 Requires:	nagios-common
+Requires:	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
