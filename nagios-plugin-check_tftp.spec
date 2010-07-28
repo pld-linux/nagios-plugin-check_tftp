@@ -6,7 +6,7 @@
 Summary:	Nagios plugin to check TFTP server
 Name:		nagios-plugin-%{plugin}
 Version:	1.2
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Networking
 Source0:	http://oss.isg.inf.ethz.ch/nagiosplug/download/TFTP-%{version}.tgz
