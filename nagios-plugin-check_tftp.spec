@@ -13,8 +13,9 @@ Source0:	http://oss.isg.inf.ethz.ch/nagiosplug/download/TFTP-%{version}.tgz
 # Source0-md5:	1a6afb28509681fb1178ef38b171852f
 Source1:	%{plugin}.cfg
 Patch0:		optparser.patch
-#Source1:	%{plugin}.cfg
 URL:		http://oss.isg.inf.ethz.ch/nagiosplug/
+%{?with_tests:BuildRequires:	python}
+BuildRequires:	rpm-pythonprov
 Requires:	nagios-common
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
