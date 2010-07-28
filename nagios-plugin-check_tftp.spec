@@ -1,3 +1,7 @@
+#
+# Conditional build:
+%bcond_without	tests		# build without tests
+
 %define		plugin	check_tftp
 Summary:	Nagios plugin to check TFTP server
 Name:		nagios-plugin-%{plugin}
@@ -29,6 +33,11 @@ Nagios plugin to check if a file can be fetched from TFTP server.
 
 # fix shebang
 %{__sed} -i -e '1s,^#!.*python,#!%{__python},' %{plugin}.py
+
+%build
+%if %{with tests}
+%{__python} %{plugin}.py --version
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
